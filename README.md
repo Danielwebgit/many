@@ -6,26 +6,26 @@ Configuramos algumas rotas para a API
 
 **Primeiro Acesso method POST**
 
-> Login de acesso
+> Login de acesso.
 
 http://localhost/codeignite3-ecommerce/api/v1/conta/login
 
 **Rotas GET**
 
-> Listar produtos
+> Listar todos os produtos.
 
 http://localhost/codeignite3-ecommerce/api/v1/produtos
 
 **Rotas POST**
 
-> Criando produto
+> Criando um produto.
 
 http://localhost/codeignite3-ecommerce/api/v1/produtos/register
 
-> Atualizando um produto
+> Atualizando um produto.
 
 http://localhost/codeignite3-ecommerce/api/v1/produtos/update/3
 
-> Deletando um produto
+> Deletando um produto.
 
 http://localhost/codeignite3-ecommerce/api/v1/produtos/deletando/3
