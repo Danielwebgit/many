@@ -1,0 +1,12 @@
+{
+  "name": "nielferas/codeignite3-ecommerce",
+  "authors": [
+    {
+      "name": "danielwebgit",
+      "email": "nielferas@gmail.com"
+    }
+  ],
+  "require": {
+    "firebase/php-jwt": "^6.1"
+  }
+}
