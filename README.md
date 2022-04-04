@@ -1,1 +1,31 @@
-# many
+### Olá, disponibilizei algumas rotas API usando recurso JWT 👋
+
+### Rotas disponíveis - Ambiente Docker V1 - Consumir com algum Http Client
+
+Configuramos algumas rotas para a API
+
+**Primeiro Acesso method POST**
+
+> Login de acesso
+
+http://localhost/codeignite3-ecommerce/api/v1/conta/login
+
+**Rotas GET**
+
+> Listar produtos
+
+http://localhost/codeignite3-ecommerce/api/v1/produtos
+
+**Rotas POST**
+
+> Criando produto
+
+http://localhost/codeignite3-ecommerce/api/v1/produtos/register
+
+> Atualizando um produto
+
+http://localhost/codeignite3-ecommerce/api/v1/produtos/update/3
+
+> Deletando um produto
+
+http://localhost/codeignite3-ecommerce/api/v1/produtos/deletando/3
