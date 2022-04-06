@@ -36,6 +36,7 @@
 
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url('assets/dist/js/demo.js') ?>"></script>
+<script src="<?= base_url('assets/dist/js/custom.js') ?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url('assets/dist/js/pages/dashboard2.js') ?>"></script>
 </body>

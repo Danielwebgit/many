@@ -5,7 +5,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0"><?= $title ?>:</h1>
-                    <a href="<?= base_url('create') ?>" class="btn btn-sm btn-primary">
+                    <a href="<?= base_url('produto/create') ?>" class="btn btn-sm btn-primary">
                         <i class="fas fa-user"></i> Adicionar
                     </a>
                 </div><!-- /.col -->

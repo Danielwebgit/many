@@ -104,9 +104,9 @@ $route['delete/(:any)'] = 'produto/delete/$1';
 
 $route['update/(:any)'] = 'produto/update/$1';
 
-$route['store'] = 'produto/store';
+$route['produto/store'] = 'produto/store';
 
-$route['create'] = 'produto/create';
+$route['produto/create'] = 'produto/create';
 
 /*------------------- COLABORADORES -------------------*/
 

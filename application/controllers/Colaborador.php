@@ -33,9 +33,11 @@ class Colaborador extends CI_Controller {
 
     public function store()
     {
-        $colaboradores = $_POST;
+        $form_data = $_POST;
+
         $this->load->model('colaborador_model');
-        $this->colaborador_model->store($colaboradores);
+
+        $this->colaborador_model->store($form_data);
         redirect('colaboradores');
     }
 

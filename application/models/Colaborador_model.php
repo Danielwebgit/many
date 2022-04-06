@@ -1,4 +1,6 @@
 <?php
+// requiring once the base class
+//require_once APPPATH.'/repositories/Colaborador_repository.php';
 
 class Colaborador_model extends CI_Model
 {
@@ -22,9 +24,12 @@ class Colaborador_model extends CI_Model
 
     public function store(array $request)
     {
-        $this->db->set($request);
-        $this->db->insert($this->db_table, $request);
-        return $request;
+      
+        $this->load->repository('colaborador_repository');
+        $colaborador_id = $this->colaborador_repository->create_colaborator($request, $this->db_table);
+        
+        $this->load->repository('endereco_repository');
+        $this->endereco_repository->create_endereco($colaborador_id, $request);
     }
 
     public function show($id)

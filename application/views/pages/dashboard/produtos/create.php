@@ -15,7 +15,7 @@
                     }
                     else
                     { ?>
-                        <form action="<?php echo base_url('store')?>" method="POST">
+                        <form action="<?php echo base_url('produto/store')?>" method="POST">
                         <?php } ?>
                     <div class="card-body">
                         <div class="form-group">
