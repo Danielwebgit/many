@@ -4,6 +4,7 @@ class Login_model extends CI_Model
 {
 
     private $email;
+    
     private $password;
 
     public function __construct()

@@ -10,6 +10,11 @@ class Produto_model extends CI_Model
         parent::__construct();
     }
 
+    /**
+     * Lista todos os produtos
+     *
+     * @return void
+     */
     public function index()
     {
         $this->db->select(
@@ -20,6 +25,13 @@ class Produto_model extends CI_Model
         return $this->db->get()->result_array();
     }
 
+    /**
+     * Cria o produto
+     * 
+     * @param {array} $request produtos.
+     * 
+     * @return void
+     */
     public function store(array $request)
     {
         $this->db->set($request);
@@ -27,6 +39,13 @@ class Produto_model extends CI_Model
         return $request;
     }
 
+    /**
+     * Mostra o produto pelo ID.
+     * 
+     * @param {array} $id produto
+     * 
+     * @return void
+     */
     public function show($id)
     {
         return $this->db->get_where($this->db_table, array(
@@ -34,6 +53,14 @@ class Produto_model extends CI_Model
         ))->row_array();
     }
 
+    /**
+     * Atualizando produto
+     * 
+     * @param {array} $data produtos
+     * @param {array} $id produto
+     * 
+     * @return void
+     */
     public function update($id, $produtos)
     {
         if($produtos){
@@ -62,6 +89,7 @@ class Produto_model extends CI_Model
      * Deletando produto
      * 
      * @param {array} $data produto
+     * 
      * @return void
      */
     public function deleta_produto(array $data)

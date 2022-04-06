@@ -24,10 +24,11 @@ class Colaborador_model extends CI_Model
 
     public function store(array $request)
     {
-      
+        // Enviar os dados para realizar no repository do colaborador.
         $this->load->repository('colaborador_repository');
         $colaborador_id = $this->colaborador_repository->create_colaborator($request, $this->db_table);
         
+        // Enviar os dados para realizar no repository do endereço.
         $this->load->repository('endereco_repository');
         $this->endereco_repository->create_endereco($colaborador_id, $request);
     }
@@ -39,6 +40,14 @@ class Colaborador_model extends CI_Model
         ))->row_array();
     }
 
+    /**
+     * Atualiza o colaborador.
+     *
+     * @param [int] $id
+     * @param [array] $colaboradores
+     * 
+     * @return void
+     */
     public function update($id, $colaboradores)
     {
         if($colaboradores){
