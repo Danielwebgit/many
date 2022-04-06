@@ -1,6 +1,6 @@
 ### Olá, disponibilizei algumas rotas API usando recurso JWT 👋
 
-### Rotas disponíveis - Ambiente Docker V1 - Consumir com algum Http Client
+### Rotas disponíveis - V1 - Consumir com algum Http Client de sua preferencia
 
 Configuramos algumas rotas para a API
 
