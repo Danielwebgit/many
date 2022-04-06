@@ -41,4 +41,19 @@ class Conta_model extends CI_Model
             return FALSE;
         }
     }
+
+    public function store_register_account(array $data)
+    {
+        $data = [
+            'nome' => $data['nome'],
+            'email' => $data['email'],
+            'senha' => md5($data['password']),
+            'created_at' => '2022-03-31 02:13:59',
+            'update_ad' => '2022-03-31 02:13:59'
+        ];
+        
+        $this->db->set($data);
+        $this->db->insert($this->db_table, $data);
+        return $data;
+    }
 }

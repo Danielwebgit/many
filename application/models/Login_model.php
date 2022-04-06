@@ -21,12 +21,25 @@ class Login_model extends CI_Model
     function validation($email, $password)
     {
         $this->db->where('nome', $email);
-        $this->db->where('senha', $password);
+        $this->db->or_where('email', $email);
+        $this->load->library('encrypt');
         $query = $this->db->get('contas');
-       
-        if(count($query->result()) > 0)
+        
+        if($query->num_rows() > 0)
         {
-            return true; 
+            foreach($query->result() as $row)
+            {
+                $store_password = $row->senha;
+                
+                if($password === $store_password)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+            }
         }
     }
 
@@ -67,36 +80,6 @@ class Login_model extends CI_Model
     {
         $this->email = $user['email'];
         $this->password = md5($user['password']);
-    }
-
-    /**
-     * Entra no sistema
-     *
-     * @return array
-     */
-    public function login(): array
-    {
-        $arrLogin = array();
-        $this->db->select('*')->from('users')
-            ->where('email', $this->email)
-            ->where('password', $this->password);
-
-        $qtdeUser = $this->db->count_all_result();
-
-        if($qtdeUser > 0)
-        {
-            $user = $this->db->get()->result();
-            $arrLogin['email'] = $user->email;
-            $arrLogin['user_id'] = $user->user_id;
-            $arrLogin['status'] = true;
-            redirect('welcome');
-        }
-        else
-        {
-            redirect('');
-        }
-
-        return $arrLogin;
     }
 
     /**

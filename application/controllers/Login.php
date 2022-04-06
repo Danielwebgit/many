@@ -20,10 +20,9 @@ class Login extends CI_Controller {
         $this->load->view('template/login_footer', $data);
     }
 
-    public function store()
+    public function store_login()
     {
         // VALIDATION RULES
-        $this->load->library('form_validation');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_error_delimiters('<p class="error">', '</p>');
@@ -33,8 +32,8 @@ class Login extends CI_Controller {
 
         // MODELO LOGIN
         $this->load->model("login_model", 'verification');
-        $query = $this->verification->validation($email, $password);
-    
+        $query = $this->verification->validation($email, md5($password));
+        
         if ($this->form_validation->run() == FALSE) 
         {
             $this->template('pages/login/form_login');
@@ -44,9 +43,7 @@ class Login extends CI_Controller {
             // VERIFICA LOGIN E SENHA.
             if ($query) {
                 $data = array('nome' => $email, 'logged' => true);
-                
                 $this->session->set_userdata('logged_user', $data);
-               
                 redirect('main');
             }
             else

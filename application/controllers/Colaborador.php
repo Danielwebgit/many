@@ -12,9 +12,8 @@ class Colaborador extends CI_Controller {
     public function index()
     {
         $this->load->model('colaborador_model');
-      
-        $data['title'] = 'Colaboradores';
         $data['colaboradores'] = $this->colaborador_model->index();
+        $data['title'] = 'Colaboradores';
         $this->template('pages/dashboard/colaborador/index', $data);
     }
 

@@ -1,5 +1,5 @@
 <p class="login-box-msg">Acessar sua conta!</p>
-<form action="<?php echo base_url('login/store') ?>" method="post">
+<form action="<?php echo base_url('login/store_login') ?>" method="post">
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Email" name="email">
         <div class="input-group-append">

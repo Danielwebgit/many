@@ -60,37 +60,18 @@ $route['produtos'] = 'produto/index';
 
 //*------------------------------------------*/
 $route['dashboard'] = 'main/dashboard';
-//*------------------------------------------*/
 
-$route['register'] = 'Account/register';
+//*------------------CONTA------------------------*/
 
-$route['store'] = 'Account/store';
+$route['register'] = 'Account/index';
+
+$route['account/store'] = 'Account/store';
 
 $route['logout'] = 'login/logout';
-
-//$route['main'] = 'Account/main';
-
-$route['save'] = 'Account/save';
 
 $route['password'] = 'Account/password';
 
 $route['changePassword/(:any)'] = 'Account/changePassword/$1';
-
-/*------------------------------------------*/
-
-$route['index'] = 'provider/provider';
-
-$route['edit/(:any)'] = 'provider/edit/$1';
-
-$route['conta/(:any)'] = 'conta_bancaria/show/$1';
-
-$route['delete/(:any)'] = 'provider/delete/$1';
-
-$route['update/(:any)'] = 'provider/update/$1';
-
-$route['store'] = 'provider/store';
-
-$route['create'] = 'provider/create';
 
 /*------------------- PRODUTOS -----------------------*/
 
