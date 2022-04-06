@@ -25,5 +25,6 @@ class Account extends CI_Controller {
         $form_dara = $_POST;
         $this->load->model('conta_model');
         $this->conta_model->store_register_account($form_dara);
+        redirect('login');
     }
 }

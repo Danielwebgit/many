@@ -1,16 +1,24 @@
 ### Olá, disponibilizei algumas rotas API usando recurso JWT, está no final dessa página 👋
 
+## Requiremento
+
+- PHP 7.3 ou superior.
+
 ## Tela de login:
 
-![Screenshot: Running tests on NetBeans 8.1](docs/imgs/tella.png)
+- Acesso:
+  - email: adm
+  - senha: adm@123
+
+![Screenshot: Running tests on  vscode](docs/imgs/tella.png)
 
 ## Tela de colaboradores:
 
-![Screenshot: Running tests on NetBeans 8.1](docs/imgs/tela01.png)
+![Screenshot: Running tests on vscode](docs/imgs/tela01.png)
 
 ## Tela de produtos:
 
-![Screenshot: Running tests on NetBeans 8.1](docs/imgs/tela02.png)
+![Screenshot: Running tests on  vscode](docs/imgs/tela02.png)
 
 ### Rotas disponíveis - V1 - Consumir com algum Http Client de sua preferencia
 
