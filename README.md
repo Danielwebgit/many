@@ -22,9 +22,13 @@ http://localhost/codeignite3-ecommerce/api/v1/produtos
 
 http://localhost/codeignite3-ecommerce/api/v1/produtos/register
 
+**Rotas PUT**
+
 > Atualizando um produto.
 
 http://localhost/codeignite3-ecommerce/api/v1/produtos/update/3
+
+**Rotas DELETE**
 
 > Deletando um produto.
 

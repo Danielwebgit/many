@@ -10,6 +10,13 @@ class Conta_model extends CI_Model
         parent::__construct();
     }
 
+    /**
+     * Login do sistema
+     *
+     * @param array $formData
+     * 
+     * @return array|null
+     */
     public function login_conta(array $formData): array|null
     {
         $array_Login = array();

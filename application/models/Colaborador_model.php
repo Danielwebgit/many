@@ -12,6 +12,11 @@ class Colaborador_model extends CI_Model
         parent::__construct();
     }
 
+    /**
+     * Lista todos os colaboradores
+     *
+     * @return void
+     */
     public function index()
     {
         $this->db->select(
@@ -22,6 +27,13 @@ class Colaborador_model extends CI_Model
         return $this->db->get()->result_array();
     }
 
+    /**
+     * Criar o colaborador.
+     *
+     * @param array $request
+     * 
+     * @return void
+     */
     public function store(array $request)
     {
         // Enviar os dados para realizar no repository do colaborador.
@@ -33,6 +45,13 @@ class Colaborador_model extends CI_Model
         $this->endereco_repository->create_endereco($colaborador_id, $request);
     }
 
+    /**
+     * Mostra o colaborador pelo ID.
+     *
+     * @param [type] $id
+     * 
+     * @return void
+     */
     public function show($id)
     {
         return $this->db->get_where($this->db_table, array(
